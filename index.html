@@ -1,14 +1,167 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Proxity</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proxity | Soluciones Tecnológicas para Empresas</title>
     <style>
-        body { font-family: Arial; text-align: center; padding: 50px; }
-        h1 { color: #0066cc; }
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .btn {
+            display: inline-block;
+            background: #0066cc;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #0055aa;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0066cc, #004499);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.2em;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        /* Productos */
+        .products {
+            padding: 80px 0;
+            background: #f9f9f9;
+        }
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .product-card h3 {
+            color: #0066cc;
+        }
+
+        /* Servicios */
+        .services {
+            padding: 80px 0;
+        }
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .service-item {
+            border-left: 4px solid #0066cc;
+            padding-left: 15px;
+        }
+
+        /* Contacto */
+        .contact {
+            background: #f9f9f9;
+            padding: 80px 0;
+            text-align: center;
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
-    <h1>¡Proxity en construcción!</h1>
-    <p>Próximamente algo increíble.</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Transforma tu negocio con tecnología inteligente</h1>
+            <p>Automatización avanzada, desarrollo a medida y soluciones escalables para empresas innovadoras.</p>
+            <a href="#contacto" class="btn">Agendar una demo</a>
+        </div>
+    </section>
+
+    <!-- Productos Destacados -->
+    <section class="products">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 50px;">Nuestros Productos Estrella</h2>
+            
+            <div class="product-card">
+                <h3>Workflow Pro</h3>
+                <p>Plataforma de automatización de procesos con IA integrada. Reduce tiempos operativos hasta un 70%.</p>
+                <a href="/workflow" class="btn">Ver detalles</a>
+            </div>
+            
+            <div class="product-card">
+                <h3>DocuStream</h3>
+                <p>Fábrica digital de documentos. Genera contratos, reportes y más en segundos con plantillas personalizables.</p>
+                <a href="/docustream" class="btn">Conocer más</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="services">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 50px;">Nuestros Servicios</h2>
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3>Hiperautomatización</h3>
+                    <p>Combina RPA, IA y análisis de datos para procesos 100% automáticos.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Desarrollo a Medida</h3>
+                    <p>Software adaptado a tus necesidades con tecnologías como .NET y Python.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Microsoft Power Platform</h3>
+                    <p>Soluciones low-code para automatizar flujos con Power Automate y Apps.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <h2>¿Listo para comenzar?</h2>
+            <p>Déjanos tus datos y un experto se contactará contigo.</p>
+            
+            <form name="contact" netlify>
+                <input type="text" name="name" placeholder="Nombre" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="tel" name="phone" placeholder="Teléfono">
+                <textarea name="message" placeholder="¿Cómo podemos ayudarte?" rows="4"></textarea>
+                <button type="submit" class="btn">Enviar mensaje</button>
+            </form>
+        </div>
+    </section>
 </body>
 </html>
