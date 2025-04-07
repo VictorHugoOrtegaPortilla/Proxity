@@ -5,7 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto | Proxity</title>
     <style>
-        /* [Tus estilos CSS existentes se mantienen igual] */
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+        
+        /* Estilos del formulario */
+        .contact-form {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button[type="submit"] {
+            background: #0066cc;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        button[type="submit"]:hover {
+            background: #0055aa;
+        }
+        
+        /* Sección de contacto alternativo */
+        .contact-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .contact-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .contact-card h3 {
+            color: #0066cc;
+        }
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .email-link {
+            color: #0066cc;
+            font-weight: 600;
+        }
     </style>
 </head>
 <body>
@@ -17,10 +97,9 @@
         <h1>Contáctenos</h1>
         <p>Complete el formulario o utilice nuestros canales directos.</p>
         
-        <!-- Formulario Netlify CORREGIDO -->
+        <!-- Formulario Netlify CORREGIDO (¡SOLO UNA ETIQUETA <form>!) -->
         <div class="contact-form">
-            <form id="form" name="contact" method="POST" netlify>
-                <form id="form" name="contact" method="POST" netlify action="/success.html">
+            <form id="form" name="contact" method="POST" netlify action="/success.html">
                 <!-- Campo oculto CRÍTICO para Netlify Forms -->
                 <input type="hidden" name="form-name" value="contact">
                 
@@ -56,7 +135,32 @@
             </form>
         </div>
         
-        <!-- [El resto de tu contenido se mantiene igual] -->
+        <!-- Opciones alternativas de contacto -->
+        <div class="contact-options">
+            <div class="contact-card">
+                <h3>Correo electrónico</h3>
+                <p>Escríbanos directamente a:</p>
+                <a href="mailto:contacto@proxity.com.co" class="email-link">contacto@proxity.com.co</a>
+            </div>
+            
+            <div class="contact-card">
+                <h3>WhatsApp</h3>
+                <p>Para consultas inmediatas:</p>
+                <a href="https://wa.me/573001234567?text=Hola%20Proxity,%20quisiera%20más%20información" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Chatear ahora
+                </a>
+                <p style="margin-top: 10px; font-size: 0.9em;">+57 311 2977029</p>
+            </div>
+            
+            <div class="contact-card">
+                <h3>Redes sociales</h3>
+                <p>Síganos para novedades:</p>
+                <div style="margin-top: 15px;">
+                    <a href="#" style="margin: 0 10px; color: #0066cc;"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" style="margin: 0 10px; color: #0066cc;"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Scripts -->
