@@ -98,9 +98,22 @@
         }
     </style>
 </head>
+
+<!-- Carga el menú con JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function(){
+      $("#navbar").load("includes/navbar.html");
+    });
+  </script>
+</head>
+    
 <body>
-    <!-- Hero Section -->
-    <section class="hero">
+  <!-- Contenedor donde se insertará el menú -->
+  <div id="navbar"></div>
+
+  <!-- Hero Section -->
+  <section class="hero">
         <div class="container">
             <h1>Transforma tu negocio con tecnología inteligente</h1>
             <p>Automatización avanzada, desarrollo a medida y soluciones escalables para empresas innovadoras.</p>
